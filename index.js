@@ -36,6 +36,7 @@ const bot = new Telegraf(BOT_TOKEN);
 const web_link = "https://rbatmining.netlify.app/";
 const community_link = "https://buy.roosterkombat.com";
 
+
 bot.start(async (ctx) => {
     const startPayload = ctx.startPayload;
     const urlSent = `${web_link}?ref=${startPayload}`;
@@ -47,12 +48,13 @@ bot.start(async (ctx) => {
         await ctx.replyWithPhoto(
             { source: 'public/like.jpg' }, // or provide a URL if it's hosted online
             {
-                caption: `*Hey, ${userName}\n👋 Welcome to the Rooster Kombat Adventures!*\n\n✨ **Play Rooster Kombat **: Tap the dog bone and watch your balance fetch amazing rewards!\n🐕 **Mine for Rooster Kombat**: Collect RBAT Tokens with every action.\n🔗 **Buy**: [$RBAT TOKEN](https://buy.roosterkombat.com)`,
+                caption: `*Hey, ${userName}! Welcome to Rooster Kombat!*\nHow cool is your RBAT?\nGot friends, relatives, co-workers?\nBring them all into the game now.\nMore buddies, more coins.`,
                 parse_mode: 'Markdown', // Ensure markdown is used in the caption
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "Game Play now!", web_app: { url: urlSent } }],
-                        [{ text: "Presale is Live Buy $RBAT", url: community_link }]
+                        [{ text: "Play now!", web_app: { url: urlSent } }],
+                        [{ text: "Join Presale", url: community_link }]
+                    
                     ],
                 },
             }
