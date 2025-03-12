@@ -34,7 +34,7 @@ app.listen(port, async () => {
 const bot = new Telegraf(BOT_TOKEN);
 
 const web_link = "https://megadogs1990.netlify.app";
-const community_link = "https://t.me/coderushdevs";
+const community_link = "https://buy.roosterkombat.com";
 
 bot.start(async (ctx) => {
     const startPayload = ctx.startPayload;
@@ -51,8 +51,8 @@ bot.start(async (ctx) => {
                 parse_mode: 'Markdown', // Ensure markdown is used in the caption
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "✨Start now!✨", web_app: { url: urlSent } }],
-                        [{ text: "👥Join Community👥", url: community_link }]
+                        [{ text: "Game Play now!", web_app: { url: urlSent } }],
+                        [{ text: "Presale is Live Buy $RBAT", url: community_link }]
                     ],
                 },
             }
