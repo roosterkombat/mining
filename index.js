@@ -33,7 +33,7 @@ app.listen(port, async () => {
 
 const bot = new Telegraf(BOT_TOKEN);
 
-const web_link = "https://rbatmining.netlify.app/";
+const web_link = "https://t.me/Roosterkombat_bot/rbatmining";
 const community_link = "https://buy.roosterkombat.com";
 
 
